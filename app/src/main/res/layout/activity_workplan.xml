@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Workplan">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+    <include layout="@layout/toolbar_layout" />
+
+    <!--<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="1dp"
+        android:background="#C5CBF1"
+        android:padding="2dp">
+
+        <TextView
+            android:id="@+id/block"
+            android:layout_width="85dp"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:gravity="center"
+            android:text="@string/block" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:layout_toEndOf="@+id/block"
+            android:layout_toRightOf="@+id/block"
+            android:background="@color/cardview_shadow_start_color" />
+
+        <TextView
+            android:id="@+id/SC"
+            android:layout_width="85dp"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:layout_toEndOf="@+id/block"
+            android:layout_toRightOf="@+id/block"
+            android:gravity="center"
+            android:text="@string/sc" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:layout_toEndOf="@+id/SC"
+            android:layout_toRightOf="@+id/block"
+            android:background="@color/cardview_shadow_start_color" />
+
+        <TextView
+            android:id="@+id/village"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:layout_toEndOf="@+id/SC"
+            android:layout_toRightOf="@+id/SC"
+            android:gravity="center"
+            android:text="@string/village" />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:layout_toEndOf="@+id/village"
+            android:layout_toRightOf="@+id/village"
+            android:background="@color/cardview_shadow_start_color" />
+
+        <TextView
+            android:id="@+id/facility"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:layout_toEndOf="@+id/view1"
+            android:layout_toRightOf="@+id/view1"
+            android:gravity="center"
+            android:text="@string/facility_id" />
+
+
+    </RelativeLayout>-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:background="#C5CBF1"
+            android:padding="2dp">
+
+            <ExpandableListView
+                android:id="@+id/expanded_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+    <RelativeLayout
+
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="#404B8A"
+            android:elevation="3dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/workplan"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/workplan"
+                android:textAlignment="center"
+                android:textColor="#ffff"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:gravity="center_horizontal" />
+
+            <TextView
+                android:id="@+id/due_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="#A5B39F  "
+
+                />
+        </LinearLayout>
+
+      <!--  <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:background="#163B3A"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="20dp"
+                    android:layout_margin="5dp"
+                    android:background="#FF6666" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:text="@string/redCode"
+                    android:textColor="@color/colorGreen" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="20dp"
+                    android:layout_margin="5dp"
+                    android:background="#FFFFCC" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:text="@string/yellowCode"
+                    android:textColor="@color/colorGreen" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="20dp"
+                    android:layout_margin="5dp"
+                    android:background="#90ee90" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:text="@string/greenCode"
+                    android:textColor="@color/colorGreen" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>-->
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:background="#E3E0DD">
+
+
+        </ListView>
+
+    </RelativeLayout>
+
+</LinearLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floating_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_dialog_email" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

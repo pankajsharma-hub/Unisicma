@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="vaccines_array">
+        <item>@string/choose_vaccine</item>
+        <item>V1  BCG</item>
+        <item>V2  OPV1</item>
+        <item>V3  DPT1</item>
+        <item>V4  Hepatitis B1</item>
+        <item>V5  Pentavalent 1*</item>
+        <item>V6  OPV 2</item>
+        <item>V7  DPT 2</item>
+        <item>V8  Hep B 2</item>
+        <item>V9  Pentavalent 2*</item>
+        <item>V10  OPV3</item>
+        <item>V11  DPT3</item>
+        <item>V12  Hep B3</item>
+        <item>V13  Pentavlent 3*</item>
+        <item>V14  Measles 1**</item>
+        <item>V15  Vitamin A1</item>
+        <item>V16  JE 1</item>
+        <item>V17  OPV Booster 1#</item>
+        <item>V18  DPT Booster 1</item>
+        <item>V19  Measles 2#</item>
+        <item>V20  Vitamin A2</item>
+        <item>V21  JE 2</item>
+
+    </string-array>
+</resources>

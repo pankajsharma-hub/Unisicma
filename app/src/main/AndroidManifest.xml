@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.unisicma">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.software.companion_device_setup" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".AboutApp"></activity>
+        <activity
+            android:name=".Tabbed"
+            android:label="@string/title_activity_tabbed"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Dashboard" />
+        <activity android:name=".RI_Immunization" />
+        <activity android:name=".SearchAnm" />
+        <activity android:name=".LangInterfaceChild" />
+        <activity android:name=".AddLanguage" />
+        <activity android:name=".AdminDesk" />
+        <activity
+            android:name=".RI_display"
+            android:parentActivityName=".Dashboard" />
+        <activity
+            android:name=".Show_Due_List"
+            android:parentActivityName=".Dashboard" />
+        <activity android:name=".vaccine_scan" />
+        <activity
+            android:name=".DueList"
+            android:parentActivityName=".Show_Due_List" />
+        <activity
+            android:name=".Vaccine_details"
+            android:parentActivityName=".Workplan_menu" />
+        <activity
+            android:name=".Workplan_menu"
+            android:parentActivityName=".DueList" />
+        <activity
+            android:name=".Workplan"
+            android:parentActivityName=".Dashboard" />
+        <activity
+            android:name=".asha_Register"
+            android:parentActivityName=".ADMIN_LOGIN" />
+        <activity
+            android:name=".Register"
+            android:parentActivityName=".ANM_Login" />
+        <activity android:name=".Authenticate_barcode" />
+        <activity android:name=".barcode_scanner" />
+        <activity
+            android:name=".ADMIN_LOGIN"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ANM_Login"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.vision.DEPENDENCIES"
+            android:value="barcode" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <receiver android:name=".RequestReceiver">
+            <intent-filter>
+                <action android:name="com.example.unisicma.REQUEST_ACTION" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".BluetoothLeService" />
+    </application>
+
+</manifest>

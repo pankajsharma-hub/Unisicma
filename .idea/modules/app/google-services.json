@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "297818613165",
+    "firebase_url": "https://unisicma.firebaseio.com",
+    "project_id": "unisicma",
+    "storage_bucket": "unisicma.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:297818613165:android:fa64066e946f5e8032ed24",
+        "android_client_info": {
+          "package_name": "com.example.unisicma"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "297818613165-v12tpa3js717n7tj37a75a9v2pleouq3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.unisicma",
+            "certificate_hash": "2f6f84c8d3ee97c7d62836ba75c16eb6311370b2"
+          }
+        },
+        {
+          "client_id": "297818613165-4b46jiiecc10ia76v11iikj39e2085i2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChAaSzzGMG_nNNWJ9bwz8HNZFaeapr3IU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "297818613165-4b46jiiecc10ia76v11iikj39e2085i2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

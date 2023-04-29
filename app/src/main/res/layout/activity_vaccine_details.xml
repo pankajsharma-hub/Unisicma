@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Vaccine_details">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/linearRoot">
+
+        <include
+            layout="@layout/toolbar_layout"
+            tools:layout_editor_absoluteX="10dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/showID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/vaccination_section"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:orientation="vertical"
+                android:background="#384186"
+                android:gravity="center"
+                android:id="@+id/BackLayout"
+                android:visibility="gone"
+                >
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/child_name"
+                    android:textColor="@color/colorGreen"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/child_id"
+                        android:textColor="@color/colorGreen"
+                        android:text="@string/c_id"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/id_value"
+                        android:layout_margin="3dp"
+                        android:textColor="@color/colorGreen"
+                        android:textStyle="italic"
+                        />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/hiddenText"
+                    android:visibility="gone"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="#384186"
+            android:elevation="3dp"
+            android:id="@+id/WeightLayout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/child_weight"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+            <!--<EditText
+                android:id="@+id/c_weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:background="#FFF"
+                android:hint="@string/enter_weight"
+                android:padding="5dp"
+                />-->
+            <TextView
+                android:id="@+id/c_weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:background="#FFF"
+                android:hint="@string/enter_weight"
+                android:padding="5dp"/>
+
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="connectToScale"
+            android:text="Connect to Scale"/>
+        <!--<Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="disconnectScale"
+            android:text="Disconnect Scale"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="sendZeroInstruction"
+            android:text="Set Zero"/>
+        <TextView
+            android:textSize="30dp"
+            android:text="0.0"
+            android:id="@+id/measured_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/zero"
+            android:text="ZERO"
+            android:textSize="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"/>
+        <TextView
+            android:id="@+id/stable"
+            android:text="STB"
+            android:textSize="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"/>-->
+        <TextView
+            android:id="@+id/connected"
+            android:text="Not Connected"
+            android:textSize="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/layout_border"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#384186"
+                android:elevation="3dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:id="@+id/ScanLayout">
+
+               <!-- <Button
+                    android:id="@+id/deleteItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="#384186"
+                    android:padding="5dp"
+                    android:textColor="@color/colorGreen"
+                    android:text="REMOVE"
+                    />-->
+
+                <Button
+                    android:id="@+id/scan_vaccine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:layout_marginTop="40dp"
+                    android:text="@string/scan_vaccine"
+                    android:padding="5dp"
+                    android:background="#384186"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorGreen"/>
+
+               <!-- <Button
+                    android:id="@+id/addItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="#384186"
+                    android:padding="5dp"
+                    android:textColor="@color/colorGreen"
+                    android:text="ADD"/>-->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#384186"
+                android:elevation="3dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:id="@+id/VGivenLayout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="@string/v_given"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/colorGreen"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+
+
+            <GridLayout
+                android:id="@+id/gr_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:columnCount="3"
+                android:columnOrderPreserved="true"
+                android:rowOrderPreserved="true">
+
+
+                <TextView
+                    android:id="@+id/showResult"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:text="@string/vaccine_id"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/showResult1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:text="@string/vaccine_name"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/showResult2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:text="@string/dosage"
+                    android:textStyle="bold" />
+
+
+            </GridLayout>
+
+
+        </LinearLayout>
+
+   <!--     <Button
+            android:id="@+id/Enter_Record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/submit"
+            android:textAlignment="center" /> -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_margin="20dp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#356812"
+                android:text="@string/next_child"
+                android:textColor="@color/colorGreen"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:padding="10dp"
+                android:onClick="VaccineAlert"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+</ScrollView>
